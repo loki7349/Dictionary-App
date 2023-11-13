@@ -11,9 +11,6 @@ body {
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
-.container {
-    
-}
 
 .card {
     width: auto;
@@ -37,7 +34,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     width: 50vw;
-    height: 18vh;
+    height: 12vh;
     margin-bottom: 2rem;
     border-radius: 1rem;
     background-color: black;
