@@ -7,19 +7,20 @@ const dictionary  = document.querySelector('.dictionary-app')
 async function dictionaryFn(word){
     const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
     .then(res => res.json())
+    
     return res[0]
 }
 
 btn.addEventListener('click', fetchandCreateCard)
 
 async function fetchandCreateCard(){
-    const data = dictionaryFn(input.value)
+    const data = await dictionaryFn(input.value)
 
     console.log(data);
 
     let partofSpeechArray = []
 
-    for(let i=0; i<data.meanings.length-1; i++){
+    for(let i=0 ; i<data.meanings.length-1 ; i++){
         partofSpeechArray.push(data.meanings[i].partOfSpeech)
     }
 
